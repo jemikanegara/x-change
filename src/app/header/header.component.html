@@ -1,0 +1,18 @@
+<div class="header">
+  <div class="layout flex container">
+    <div class="brand">
+      <a routerLink="/">
+        X-CHANGE
+      </a>
+    </div>
+    <div class="middle">Your Balance: $200</div>
+    <div class="right">
+      <div *ngIf="isAuth;else login">
+        <fa-icon icon="bars"></fa-icon>
+      </div>
+      <ng-template #login>
+        Login
+      </ng-template>
+    </div>
+  </div>
+</div>

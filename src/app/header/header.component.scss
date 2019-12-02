@@ -1,0 +1,22 @@
+.header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  border-bottom: 1px solid #eee;
+  min-height: 50px;
+  padding: 10px;
+  left: 0;
+  background: #fff;
+}
+
+.container {
+  padding: 10px;
+}
+
+.brand {
+  font-size: 16px;
+}
+
+.right {
+  cursor: pointer;
+}
