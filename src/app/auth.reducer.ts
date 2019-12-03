@@ -1,14 +1,13 @@
 import { createReducer, on } from '@ngrx/store';
-import { increment, decrement, reset } from './auth.actions';
+import { login, logout } from './auth.actions';
 
-export const initialState = 0;
+export const initialState = false;
 
 const _authReducer = createReducer(initialState,
-  on(increment, state => state + 1),
-  on(decrement, state => state - 1),
-  on(reset, state => 0),
+  on(login, () => true),
+  on(logout, () => false),
 );
 
-export function authReducer(state, action) {
+export const authReducer = (state, action) => {
   return _authReducer(state, action);
 }

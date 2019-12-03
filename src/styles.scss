@@ -1,12 +1,23 @@
-/* You can add global styles to this file, and also import other style files */
+/* VARIABLES */
 $site-width : 425px;
-$margin-auto: 0 auto;
+$section-width: 90%;
+$font-family: 'Monserrat';
+$green: #1ABC9C;
+$red: #E74C3C;
+$active: #2C3E50;
+$inactive: #34495E;
+$gold: #F1C40F;
+$silver: #BDC3C7;
+$platinum: #EEEEEE;
+$rhodium: #F39C12;
 
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Montserrat';
+  font-family: $font-family;
+  border: none;
+  outline: none;
 }
 
 a {
@@ -19,13 +30,93 @@ body {
   padding-top: 60px;
 }
 
+img {
+  max-width: 100%;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #000000;
+  font-weight: 400;
+  margin: 5px 0;
+}
+
+p {
+  margin: 5px 0;
+}
+
+h2 {
+  font-size: 18px;
+}
+
+/* Layouting */
+.layout {
+  max-width: $site-width;
+  margin: 0 auto;
+}
+
+.section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: $section-width;
+  margin: 0 auto;
+
+  &.full {
+    width: 100%;
+  }
+}
+
+.module {
+  width: 100%;
+
+  &.half {
+    width: 50%;
+  }
+
+  &.three {
+    width: 33.33%;
+  }
+
+  &.four {
+    width: 25%;
+  }
+
+  @media (max-width: 980px) {
+    & {
+      width: 100%;
+    }
+  }
+}
+
 .flex {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.layout {
-  max-width: 475px;
-  margin: 0 auto;
+/* Elements */
+button,
+select {
+  padding: 10px;
+  margin: 5px 0;
+  color: #FFF;
+  border-radius: 5px;
+
+  &.uppercase {
+    text-transform: uppercase;
+  }
+
+  &.green {
+    background-color: $green;
+  }
+
+  &.active {
+    background-color: $active;
+  }
 }

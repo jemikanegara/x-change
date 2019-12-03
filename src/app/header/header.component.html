@@ -1,5 +1,5 @@
 <div class="header">
-  <div class="layout flex container">
+  <div class="layout section full container">
     <div class="brand">
       <a routerLink="/">
         X-CHANGE
@@ -7,11 +7,12 @@
     </div>
     <div class="middle">Your Balance: $200</div>
     <div class="right">
-      <div *ngIf="isAuth;else login">
+      <div *ngIf="isAuth$ | async; else login">
+        <span (click)="onLogout()">Logout</span>
         <fa-icon icon="bars"></fa-icon>
       </div>
       <ng-template #login>
-        Login
+        <span (click)="onLogin()">Login</span>
       </ng-template>
     </div>
   </div>
