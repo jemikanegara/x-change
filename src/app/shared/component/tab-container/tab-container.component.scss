@@ -1,0 +1,13 @@
+@import '../../../../styles.scss';
+
+.section {
+  margin-top: -30px;
+  background-color: $gold;
+  padding: 0 5px;
+}
+
+.module {
+  >* {
+    width: 48%!important;
+  }
+}

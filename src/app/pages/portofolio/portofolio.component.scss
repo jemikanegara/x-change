@@ -5,16 +5,4 @@
     height: 100px;
     background: $inactive;
   }
-
-  &.section-2 {
-    margin-top: -30px;
-    background-color: $gold;
-    padding: 0px 10px;
-  }
-
-  .module {
-    >* {
-      width: 48%;
-    }
-  }
 }

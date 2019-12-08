@@ -1,0 +1,5 @@
+<select class="active" [(ngModel)]="active" (change)="onChange()">
+  <option *ngFor="let option of options" [value]="option">
+    {{ option | titlecase }}
+  </option>
+</select>

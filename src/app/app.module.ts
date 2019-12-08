@@ -4,7 +4,6 @@ import { NgModule } from '@angular/core';
 // Module
 import { AppIconModule } from './app-icon.module'
 import { AppRoutingModule } from './app-routing.module';
-import { SharedModule } from './shared/shared.module';
 
 // Store
 import { StoreModule } from '@ngrx/store';
@@ -25,7 +24,6 @@ import { HomeComponent } from './pages/home/home.component';
     BrowserModule,
     AppRoutingModule,
     AppIconModule,
-    SharedModule,
     StoreModule.forRoot({
       isAuth: authReducer
     })

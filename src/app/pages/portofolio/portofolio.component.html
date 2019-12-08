@@ -1,22 +1,7 @@
 <div class="section section-1 full">
 </div>
 
-<div class="section section-2">
-  <div class="module flex">
-    <select class="active">
-      <option>
-        Gold
-      </option>
-      <option>
-        Silver
-      </option>
-      <option>
-        Platinum
-      </option>
-      <option>
-        Rhodium
-      </option>
-    </select>
-    <button type="button" class="green">Ask</button>
-  </div>
-</div>
+<app-tab-container>
+  <app-tab-select [options]="options" (select)="onSelect($event)" [active]="options[0]"> </app-tab-select>
+  <app-tab-button></app-tab-button>
+</app-tab-container>
